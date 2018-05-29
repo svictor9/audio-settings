@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aj-snapshot>
+<alsa>
+  <client name="System">
+    <port id="0" />
+    <port id="1" />
+  </client>
+  <client name="Midi Through">
+    <port id="0" />
+  </client>
+  <client name="Komplete Audio 6">
+    <port id="0" />
+  </client>
+  <client name="Photon 25">
+    <port id="0" />
+    <port id="1" />
+  </client>
+  <client name="BCR2000">
+    <port id="0" />
+    <port id="1" />
+  </client>
+  <client name="aj-snapshot" />
+  <client name="sooperlooper">
+    <port id="0" />
+  </client>
+</alsa>
+<jack>
+  <client name="system">
+    <port name="capture_1">
+      <connection port="sooperlooper:loop0_in_1" />
+    </port>
+    <port name="capture_2" />
+    <port name="capture_3" />
+    <port name="capture_4" />
+    <port name="capture_5" />
+    <port name="capture_6" />
+    <port name="midi_capture_1">
+      <connection port="qmidiarp:in" />
+      <connection port="yoshimi:midi in" />
+    </port>
+    <port name="midi_capture_2">
+      <connection port="qmidiarp:in" />
+      <connection port="yoshimi:midi in" />
+    </port>
+    <port name="midi_capture_3" />
+    <port name="midi_capture_4">
+      <connection port="mididings:in_1" />
+      <connection port="hydrogen-midi:RX" />
+    </port>
+    <port name="midi_capture_5">
+      <connection port="qmidiarp:in" />
+      <connection port="hydrogen-midi:RX" />
+    </port>
+  </client>
+  <client name="qmidiarp">
+    <port name="out 1">
+      <connection port="yoshimi:midi in" />
+    </port>
+    <port name="out 2" />
+  </client>
+  <client name="yoshimi">
+    <port name="left">
+      <connection port="Non-Mixer (Yoshi arp):In3/in-1" />
+    </port>
+  </client>
+  <client name="Hydrogen">
+    <port name="out_L">
+      <connection port="Non-Mixer/Bus1:in-1" />
+    </port>
+  </client>
+  <client name="yoshimi">
+    <port name="right">
+      <connection port="Non-Mixer (Yoshi arp):In3/in-2" />
+    </port>
+  </client>
+  <client name="Hydrogen">
+    <port name="out_R">
+      <connection port="Non-Mixer/Bus1:in-2" />
+    </port>
+  </client>
+  <client name="hydrogen-midi">
+    <port name="TX" />
+  </client>
+  <client name="Non-Mixer (Mike)">
+    <port name="In1/aux-A/out-1" />
+    <port name="In1/aux-A/out-2" />
+    <port name="In1/aux-B/out-1" />
+    <port name="In1/aux-B/out-2" />
+    <port name="In1/out-1" />
+    <port name="In1/out-2" />
+    <port name="In2/aux-A/out-1" />
+    <port name="In2/aux-A/out-2" />
+    <port name="In2/aux-B/out-1" />
+    <port name="In2/aux-B/out-2" />
+    <port name="In2/out-1" />
+    <port name="In2/out-2" />
+  </client>
+  <client name="Non-Mixer (Yoshi arp)">
+    <port name="In3/aux-A/out-1" />
+  </client>
+  <client name="yoshimi">
+    <port name="track_1_l">
+      <connection port="Non-Mixer (Yoshi arp):In3/in-1" />
+    </port>
+  </client>
+  <client name="Non-Mixer (Yoshi arp)">
+    <port name="In3/aux-A/out-2" />
+  </client>
+  <client name="yoshimi">
+    <port name="track_1_r">
+      <connection port="Non-Mixer (Yoshi arp):In3/in-2" />
+    </port>
+    <port name="track_2_l">
+      <connection port="Non-Mixer (Yoshi arp):In4/in-1" />
+    </port>
+  </client>
+  <client name="Non-Mixer (Yoshi arp)">
+    <port name="In3/aux-B/out-1" />
+  </client>
+  <client name="yoshimi">
+    <port name="track_2_r">
+      <connection port="Non-Mixer (Yoshi arp):In4/in-2" />
+    </port>
+  </client>
+  <client name="mididings">
+    <port name="out_1">
+      <connection port="system:midi_playback_4" />
+      <connection port="system:midi_playback_5" />
+    </port>
+  </client>
+  <client name="yoshimi">
+    <port name="track_3_l">
+      <connection port="sooperlooper:loop1_in_1" />
+      <connection port="Non-Mixer (Yoshi arp):In5/in-1" />
+    </port>
+  </client>
+  <client name="Non-Mixer (Yoshi arp)">
+    <port name="In3/aux-B/out-2" />
+  </client>
+  <client name="yoshimi">
+    <port name="track_3_r">
+      <connection port="sooperlooper:loop1_in_2" />
+      <connection port="Non-Mixer (Yoshi arp):In5/in-2" />
+    </port>
+  </client>
+  <client name="Non-Mixer (Yoshi arp)">
+    <port name="In3/out-1">
+      <connection port="Non-Mixer/Master Ouste:in-1" />
+    </port>
+  </client>
+  <client name="yoshimi">
+    <port name="track_4_l">
+      <connection port="Non-Mixer (Yoshi arp):In6/in-1" />
+    </port>
+    <port name="track_4_r">
+      <connection port="Non-Mixer (Yoshi arp):In6/in-2" />
+    </port>
+  </client>
+  <client name="Non-Mixer (Yoshi arp)">
+    <port name="In3/out-2">
+      <connection port="Non-Mixer/Master Ouste:in-2" />
+    </port>
+    <port name="In4/aux-A/out-1" />
+    <port name="In4/aux-A/out-2" />
+    <port name="In4/aux-B/out-1" />
+    <port name="In4/aux-B/out-2" />
+    <port name="In4/out-1">
+      <connection port="Non-Mixer/Master Ouste:in-1" />
+    </port>
+    <port name="In4/out-2">
+      <connection port="Non-Mixer/Master Ouste:in-2" />
+    </port>
+    <port name="In5/aux-A/out-1" />
+    <port name="In5/aux-A/out-2" />
+    <port name="In5/aux-B/out-1" />
+    <port name="In5/aux-B/out-2" />
+    <port name="In5/out-1">
+      <connection port="Non-Mixer/Master Ouste:in-1" />
+    </port>
+    <port name="In5/out-2">
+      <connection port="Non-Mixer/Master Ouste:in-2" />
+    </port>
+    <port name="In6/aux-A/out-1" />
+    <port name="In6/aux-A/out-2" />
+    <port name="In6/aux-B/out-1" />
+    <port name="In6/aux-B/out-2" />
+    <port name="In6/out-1">
+      <connection port="Non-Mixer/Master Ouste:in-1" />
+    </port>
+    <port name="In6/out-2">
+      <connection port="Non-Mixer/Master Ouste:in-2" />
+    </port>
+  </client>
+  <client name="Non-Mixer/In7">
+    <port name="aux-A/out-1" />
+    <port name="aux-A/out-2" />
+    <port name="aux-B/out-1" />
+    <port name="aux-B/out-2" />
+    <port name="out-1" />
+    <port name="out-2" />
+  </client>
+  <client name="Non-Mixer/In8">
+    <port name="aux-A/out-1" />
+    <port name="aux-A/out-2" />
+    <port name="aux-B/out-1" />
+    <port name="aux-B/out-2" />
+    <port name="out-1" />
+    <port name="out-2" />
+  </client>
+  <client name="Non-Mixer/Bus1">
+    <port name="aux-A/out-1" />
+    <port name="aux-A/out-2" />
+    <port name="out-1">
+      <connection port="Non-Mixer/Master Ouste:in-1" />
+    </port>
+    <port name="out-2">
+      <connection port="Non-Mixer/Master Ouste:in-2" />
+    </port>
+  </client>
+  <client name="sooperlooper">
+    <port name="common_out_1" />
+    <port name="common_out_2" />
+    <port name="loop0_out_1">
+      <connection port="Non-Mixer (Mike):In1/in-1" />
+    </port>
+  </client>
+  <client name="Non-Mixer/Bus2">
+    <port name="out-1" />
+    <port name="out-2" />
+  </client>
+  <client name="sooperlooper">
+    <port name="loop1_out_1">
+      <connection port="Non-Mixer (Mike):In2/in-1" />
+    </port>
+    <port name="loop1_out_2" />
+    <port name="loop2_out_1" />
+    <port name="loop2_out_2" />
+  </client>
+  <client name="Non-Mixer/Bus3">
+    <port name="out-1" />
+  </client>
+  <client name="Non-Mixer/Bus4">
+    <port name="out-1" />
+  </client>
+  <client name="Non-Mixer/Bus5">
+    <port name="out-1" />
+  </client>
+  <client name="Non-Mixer/Bus6">
+    <port name="out-1" />
+  </client>
+  <client name="Non-Mixer/Bus8">
+    <port name="out-1" />
+  </client>
+  <client name="Non-Mixer/Bus7">
+    <port name="out-1" />
+  </client>
+  <client name="Non-Mixer/Master Ouste">
+    <port name="out-1">
+      <connection port="system:playback_1" />
+    </port>
+    <port name="out-2">
+      <connection port="system:playback_2" />
+    </port>
+  </client>
+</jack>
+</aj-snapshot>

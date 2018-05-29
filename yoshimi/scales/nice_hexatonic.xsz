@@ -1,0 +1,94 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ZynAddSubFX-data>
+<ZynAddSubFX-data version-major="1" version-minor="1">
+<INFORMATION>
+<par name="PADsynth_used" value="0" />
+</INFORMATION>
+<BASE_PARAMETERS>
+<par name="max_midi_parts" value="16" />
+<par name="max_kit_items_per_instrument" value="16" />
+<par name="max_system_effects" value="4" />
+<par name="max_insertion_effects" value="8" />
+<par name="max_instrument_effects" value="3" />
+<par name="max_addsynth_voices" value="8" />
+</BASE_PARAMETERS>
+<MICROTONAL>
+<string name="name">Hexatonic scale in 41-tET</string>
+<string name="comment">Hexatonic scale in 41-tET</string>
+<par_bool name="invert_up_down" value="no" />
+<par_bool name="invert_up_down_center" value="yes" />
+<par_bool name="enabled" value="yes" />
+<par name="global_fine_detune" value="64" />
+<par name="a_note" value="69" />
+<par_real name="a_freq" value="440" />
+<SCALE>
+<par name="scale_shift" value="64" />
+<par name="first_key" value="0" />
+<par name="last_key" value="127" />
+<par name="middle_note" value="60" />
+<OCTAVE>
+<par name="octave_size" value="6" />
+<DEGREE id="0">
+<par_real name="cents" value="1.2" />
+</DEGREE>
+<DEGREE id="1">
+<par_real name="cents" value="1.25" />
+</DEGREE>
+<DEGREE id="2">
+<par_real name="cents" value="1.5" />
+</DEGREE>
+<DEGREE id="3">
+<par_real name="cents" value="1.55" />
+</DEGREE>
+<DEGREE id="4">
+<par_real name="cents" value="1.93" />
+</DEGREE>
+<DEGREE id="5">
+<par name="numerator" value="2" />
+<par name="denominator" value="1" />
+</DEGREE>
+</OCTAVE>
+<KEYBOARD_MAPPING>
+<par name="map_size" value="12" />
+<par name="mapping_enabled" value="0" />
+<KEYMAP id="0">
+<par name="degree" value="0" />
+</KEYMAP>
+<KEYMAP id="1">
+<par name="degree" value="1" />
+</KEYMAP>
+<KEYMAP id="2">
+<par name="degree" value="2" />
+</KEYMAP>
+<KEYMAP id="3">
+<par name="degree" value="3" />
+</KEYMAP>
+<KEYMAP id="4">
+<par name="degree" value="4" />
+</KEYMAP>
+<KEYMAP id="5">
+<par name="degree" value="0" />
+</KEYMAP>
+<KEYMAP id="6">
+<par name="degree" value="0" />
+</KEYMAP>
+<KEYMAP id="7">
+<par name="degree" value="0" />
+</KEYMAP>
+<KEYMAP id="8">
+<par name="degree" value="0" />
+</KEYMAP>
+<KEYMAP id="9">
+<par name="degree" value="0" />
+</KEYMAP>
+<KEYMAP id="10">
+<par name="degree" value="0" />
+</KEYMAP>
+<KEYMAP id="11">
+<par name="degree" value="0" />
+</KEYMAP>
+</KEYBOARD_MAPPING>
+</SCALE>
+</MICROTONAL>
+</ZynAddSubFX-data>

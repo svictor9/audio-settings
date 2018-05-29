@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aj-snapshot>
+<alsa>
+  <client name="System">
+    <port id="0" />
+    <port id="1" />
+  </client>
+  <client name="Midi Through">
+    <port id="0" />
+  </client>
+  <client name="Komplete Audio 6">
+    <port id="0" />
+  </client>
+  <client name="Photon 25">
+    <port id="0" />
+    <port id="1" />
+  </client>
+  <client name="Patchage" />
+</alsa>
+<jack>
+  <client name="system">
+    <port name="capture_1">
+      <connection port="PulseAudio JACK Source:front-left" />
+    </port>
+    <port name="capture_2">
+      <connection port="PulseAudio JACK Source:front-right" />
+    </port>
+    <port name="capture_3" />
+    <port name="capture_4" />
+    <port name="capture_5" />
+    <port name="capture_6" />
+    <port name="midi_capture_1">
+      <connection port="seq64:system midi_capture_1" />
+    </port>
+    <port name="midi_capture_2">
+      <connection port="seq64:system midi_capture_2" />
+      <connection port="yoshimi:midi in" />
+    </port>
+    <port name="midi_capture_3">
+      <connection port="seq64:system midi_capture_3" />
+    </port>
+  </client>
+  <client name="PulseAudio JACK Sink">
+    <port name="front-left">
+      <connection port="system:playback_1" />
+    </port>
+    <port name="front-right">
+      <connection port="system:playback_2" />
+    </port>
+  </client>
+  <client name="seq64">
+    <port name="system midi_playback_1">
+      <connection port="system:midi_playback_1" />
+      <connection port="Black Pearl Drumkit:control" />
+    </port>
+    <port name="system midi_playback_2">
+      <connection port="system:midi_playback_2" />
+      <connection port="yoshimi:midi in" />
+    </port>
+  </client>
+  <client name="Non-Mixer/Bass">
+    <port name="aux-A/out-1">
+      <connection port="Non-Mixer/Eko:in-1" />
+    </port>
+    <port name="aux-A/out-2">
+      <connection port="Non-Mixer/Eko:in-2" />
+    </port>
+    <port name="out-1">
+      <connection port="Non-Mixer/MAIN:in-1" />
+    </port>
+    <port name="out-2">
+      <connection port="Non-Mixer/MAIN:in-2" />
+    </port>
+  </client>
+  <client name="yoshimi">
+    <port name="left" />
+    <port name="right" />
+  </client>
+  <client name="Non-Mixer/Bass2">
+    <port name="out-1">
+      <connection port="Non-Mixer/MAIN:in-1" />
+    </port>
+    <port name="out-2">
+      <connection port="Non-Mixer/MAIN:in-2" />
+    </port>
+  </client>
+  <client name="Non-Mixer/Pad">
+    <port name="out-1">
+      <connection port="Non-Mixer/MAIN:in-1" />
+    </port>
+    <port name="out-2">
+      <connection port="Non-Mixer/MAIN:in-2" />
+    </port>
+  </client>
+  <client name="yoshimi">
+    <port name="track_1_l">
+      <connection port="Non-Mixer/Bass:in-1" />
+    </port>
+    <port name="track_1_r">
+      <connection port="Non-Mixer/Bass:in-2" />
+    </port>
+    <port name="track_2_l">
+      <connection port="Non-Mixer/Bass2:in-1" />
+    </port>
+    <port name="track_2_r">
+      <connection port="Non-Mixer/Bass2:in-2" />
+    </port>
+    <port name="track_3_l">
+      <connection port="Non-Mixer/Pad:in-1" />
+    </port>
+    <port name="track_3_r">
+      <connection port="Non-Mixer/Pad:in-2" />
+    </port>
+  </client>
+  <client name="Non-Mixer/Pad2">
+    <port name="out-1">
+      <connection port="Non-Mixer/MAIN:in-1" />
+    </port>
+  </client>
+  <client name="yoshimi">
+    <port name="track_4_l">
+      <connection port="Non-Mixer/Lead:in-1" />
+    </port>
+  </client>
+  <client name="Non-Mixer/Pad2">
+    <port name="out-2">
+      <connection port="Non-Mixer/MAIN:in-2" />
+    </port>
+  </client>
+  <client name="yoshimi">
+    <port name="track_4_r">
+      <connection port="Non-Mixer/Lead:in-2" />
+    </port>
+    <port name="track_5_l" />
+    <port name="track_5_r" />
+    <port name="track_6_l" />
+    <port name="track_6_r" />
+    <port name="track_7_l" />
+    <port name="track_7_r" />
+    <port name="track_8_l" />
+    <port name="track_8_r" />
+  </client>
+  <client name="Non-Mixer/Lead">
+    <port name="out-1">
+      <connection port="Non-Mixer/MAIN:in-1" />
+    </port>
+    <port name="out-2">
+      <connection port="Non-Mixer/MAIN:in-2" />
+    </port>
+  </client>
+  <client name="Non-Mixer/Lead2">
+    <port name="out-1">
+      <connection port="Non-Mixer/MAIN:in-1" />
+    </port>
+    <port name="out-2">
+      <connection port="Non-Mixer/MAIN:in-2" />
+    </port>
+  </client>
+  <client name="Non-Mixer/Drumz">
+    <port name="out-1">
+      <connection port="Non-Mixer/MAIN:in-1" />
+    </port>
+    <port name="out-2">
+      <connection port="Non-Mixer/MAIN:in-2" />
+    </port>
+  </client>
+  <client name="Non-Mixer/Eko">
+    <port name="out-1">
+      <connection port="Non-Mixer/MAIN:in-1" />
+    </port>
+    <port name="out-2">
+      <connection port="Non-Mixer/MAIN:in-2" />
+    </port>
+  </client>
+  <client name="Non-Mixer/MAIN">
+    <port name="out-1">
+      <connection port="system:playback_1" />
+    </port>
+    <port name="out-2">
+      <connection port="system:playback_2" />
+    </port>
+  </client>
+  <client name="Black Pearl Drumkit">
+    <port name="outL">
+      <connection port="Non-Mixer/Drumz:in-1" />
+    </port>
+    <port name="outR">
+      <connection port="Non-Mixer/Drumz:in-2" />
+    </port>
+  </client>
+</jack>
+</aj-snapshot>

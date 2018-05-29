@@ -1,0 +1,103 @@
+#!/bin/bash
+MYTERM="xfce4-terminal --tab --drop-down --hide-menubar --hide-toolbar"
+MYJACK="/usr/bin/jackd -dalsa -r48000 -p128 -n3 -Xraw -D -Chw:K6,0 -Phw:K6,0 -I291 -O291"
+function kill_apps() {
+    # Tries to kill an array of apps given as parameter
+    TOKILL=("$@")
+    #Try clean exit first
+    for app in ${TOKILL[@]}
+    do
+	killall -15 $app
+    done
+    sleep 1
+    for app in ${TOKILL[@]}
+    do
+	killall -9 $app
+    done
+}
+
+function start_apps() {
+    # Runs start functions for an array of apps given as parameter
+    TOSTART=("$@")
+    for app in ${TOSTART[@]}
+    do
+	start_$app
+    done
+}
+
+function open_term() {
+    $MYTERM --title=$1
+}
+
+# START FUNCTIONS ARE BELOW
+# Function name for application X should be start_X
+
+function start_qjackctl {
+    #qjackctl configured to start jackd & co.
+    
+    #double check that jackd & co. are gone
+    killall -9 jackd 
+    killall -9 jackdbus
+    killall -9 a2jmidid
+
+    qjackctl &
+    sleep 2
+    
+}
+
+function start_jack() {
+    $MYTERM --title=jackd -x $MYJACK 
+    sleep 1
+}
+
+function start_yoshimi() {
+    DIR="$HOME/yoshimi/patchsets/"
+    FILE="$DIR/$NAME.xmz"
+    $MYTERM --title=Yoshimi -x yoshimi --jack-midi --load=$FILE 
+}
+
+function start_qmidiarp() {
+    DIR="$HOME/qmidiarp/"
+    FILE="$DIR/$NAME.qmax"
+    $MYTERM --title=Qmidiarp -x qmidiarp $FILE 
+}
+
+
+function start_hydrogen() {
+    DIR="$HOME/hydrogen/"
+    # FILE="$(ls *.h2song | egrep --invert-match autosave)"
+    FILE="$DIR/$NAME.h2song"
+    $MYTERM --title=Hydrogen -x hydrogen --song $FILE 
+}
+
+function start_aj-snapshot() {
+    DIR="$HOME/aj-snapshot/"
+    FILE="$DIR/$NAME"
+    $MYTERM --title=aj-snapshot -x aj-snapshot -d $FILE 
+}
+
+function start_non-mixer() {
+    DIR="$HOME/non-mixer/"
+    PROJDIR="$DIR/$NAME" # Actually a dir
+    $MYTERM --title=non-mixer -x non-mixer --osc-port=9769 $PROJDIR
+}
+
+function start_seq64() {
+    DIR="$HOME/seq64"
+    FILE="$DIR/$NAME" # Actually a dir
+    $MYTERM --title=seq64 -x seq64 --jack-midi $FILE 
+}
+
+function start_mididings() {
+    DIR="$HOME/mididings"
+    FILE="$DIR/$NAME.py"
+    $MYTERM --title=mididings -x mididings -R -f $FILE
+}
+
+function start_slgui() {
+    killall -9 sooperlooper # kill_apps() kills only slgui
+    DIR="$HOME/sooperlooper"
+    FILE="$DIR/$NAME.slsess"
+    $MYTERM --title=Slooper -x slgui -L $FILE 
+}
+

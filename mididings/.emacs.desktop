@@ -1,0 +1,31 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Tue May 29 12:14:58 2018
+;; Desktop file format version 208
+;; Emacs version 25.3.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23309 10274 614204 726000) (desktop . "208") "tor@balena" nil nil ((((foreground-color . "unspecified-fg") (display-type . mono) (background-mode . dark) (cursor-color . "white") (tool-bar-lines . 0) (background-color . "unspecified-bg") (font . "tty") (height . 9) (width . 10) (modeline . t) (unsplittable) (menu-bar-lines . 1) (frameset--id . "FE40-320C-8DCE-0F18") (frameset--mini t) (minibuffer . t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 10) (pixel-height . 8) (total-width . 10) (total-height . 8) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 145) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/mididings/default.py" "~/.emacs.d/mu4e_init.el" "~/.emacs.d/bookmarks" "~/.config/mididings/default.py" "~/mididings/AutoManea.py" "~/.config/mididings" "~/.emacs.d/init.el" "~/Scripts/Common_functions" "~/Desktop/Script_AutoManea"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/tor/mididings/default.py"
+  "default.py"
+  'python-mode
+  '(eldoc-mode helm-mode projectile-mode company-mode elpy-mode highlight-indentation-mode yas-minor-mode flycheck-mode)
+  1105
+  '(1122 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (1188 2416 55 442 43 647 2415 1728 1066 1738 1066 1066 1895 1337 1112))))
+

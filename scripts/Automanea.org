@@ -1,0 +1,21 @@
+Mélange TytFlyt- Automanea — à reprendre
+
+
+Pédale prog 01 (notes)
+Boutons prog 1 (cc ch 1 et 16)
+Photon commande arpégiateur 
+Clavier commande yoshi
+
+* Sooperlooper
+8 loops
+** Mute                                                            :boutons:
+Ch 16 cc 33-72 Rangée de boutons en haut
+** Mute trigger (selected loop) = sorte de undo                     :pédale:
+Ch 1 cc 26 pédale 5 bas droite
+** Pan                                                             :boutons:
+Ch 16 cc 16 Potards haut sélection 2
+** Record exclusive (SUS = on appuyé, off relaché)                   :pédale:
+Ch 1 n 0-8 Pédales 1-4 et 6-9
+** Wet (volume)                                                    :boutons:
+Ch 1 cc 1-8 
+

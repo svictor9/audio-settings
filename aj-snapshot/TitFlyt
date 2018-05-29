@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aj-snapshot>
+<alsa>
+  <client name="System">
+    <port id="0" />
+    <port id="1" />
+  </client>
+  <client name="Midi Through">
+    <port id="0" />
+  </client>
+  <client name="Komplete Audio 6">
+    <port id="0" />
+  </client>
+  <client name="Photon 25">
+    <port id="0" />
+    <port id="1" />
+  </client>
+  <client name="BCR2000">
+    <port id="0" />
+    <port id="1" />
+  </client>
+  <client name="a2jmidid" />
+  <client name="aj-snapshot" />
+  <client name="sooperlooper">
+    <port id="0" />
+  </client>
+  <client name="qmidiroute">
+    <port id="1" />
+    <port id="2" />
+  </client>
+</alsa>
+<jack>
+  <client name="system">
+    <port name="capture_1">
+      <connection port="PulseAudio JACK Source:front-left" />
+      <connection port="sooperlooper:common_in_1" />
+    </port>
+    <port name="capture_2">
+      <connection port="PulseAudio JACK Source:front-right" />
+      <connection port="sooperlooper:common_in_2" />
+    </port>
+    <port name="capture_3" />
+    <port name="capture_4" />
+    <port name="capture_5" />
+    <port name="capture_6" />
+    <port name="midi_capture_1">
+      <connection port="yoshimi:midi in" />
+    </port>
+    <port name="midi_capture_2">
+      <connection port="qmidiarp:in" />
+    </port>
+    <port name="midi_capture_3" />
+    <port name="midi_capture_4">
+      <connection port="a2j:sooperlooper [130] (playback): sooperlooper" />
+      <connection port="qmidiarp:in" />
+    </port>
+    <port name="midi_capture_5">
+      <connection port="a2j:sooperlooper [130] (playback): sooperlooper" />
+    </port>
+  </client>
+  <client name="PulseAudio JACK Sink">
+    <port name="front-left">
+      <connection port="system:playback_1" />
+    </port>
+    <port name="front-right">
+      <connection port="system:playback_2" />
+    </port>
+  </client>
+  <client name="a2j">
+    <port name="Midi Through [14] (capture): Midi Through Port-0" />
+    <port name="qmidiroute [131] (capture): out 1" />
+    <port name="qmidiroute [131] (capture): out 2" />
+  </client>
+  <client name="qmidiarp">
+    <port name="out 1">
+      <connection port="yoshimi:midi in" />
+    </port>
+    <port name="out 2">
+      <connection port="yoshimi:midi in" />
+    </port>
+  </client>
+  <client name="yoshimi">
+    <port name="left">
+      <connection port="system:playback_1" />
+    </port>
+  </client>
+  <client name="Hydrogen">
+    <port name="out_L">
+      <connection port="system:playback_1" />
+    </port>
+  </client>
+  <client name="yoshimi">
+    <port name="right">
+      <connection port="system:playback_2" />
+    </port>
+  </client>
+  <client name="Hydrogen">
+    <port name="out_R">
+      <connection port="system:playback_2" />
+    </port>
+  </client>
+  <client name="hydrogen-midi">
+    <port name="TX" />
+  </client>
+  <client name="sooperlooper">
+    <port name="common_out_1">
+      <connection port="system:playback_1" />
+    </port>
+    <port name="common_out_2">
+      <connection port="system:playback_2" />
+    </port>
+  </client>
+  <client name="a2j">
+    <port name="sooperlooper [130] (capture): sooperlooper" />
+  </client>
+</jack>
+</aj-snapshot>
